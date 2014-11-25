@@ -1,8 +1,9 @@
 class FoodController < ApplicationController
   def index
+  	
   end
 
   def show
-  	debugger
+  	@food = SouthFood.find_by_id(params[:id])
   end
 end

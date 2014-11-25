@@ -3,5 +3,6 @@ class HomeController < ApplicationController
   end
 
   def food
+  	@food = SouthFood.all
   end
 end
