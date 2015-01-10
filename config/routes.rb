@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'home/index'
 
   get 'home/food'
 
-  resources :food
+  resources :food do
+    resources :comments
+  end
 
 
   root 'home#index'
